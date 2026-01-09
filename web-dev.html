@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Development | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .subpage-hero {
+            padding-top: 150px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.1), transparent);
+        }
+
+        .back-btn {
+            margin-bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .category-card {
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--glass-border);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .category-card:hover .category-icon {
+            background: var(--primary-color);
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        .category-card h3 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .category-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="scrolled">
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html"><span>DE</span>VELOPER</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects" class="active">My Work</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="subpage-hero">
+            <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Back to My Work</a>
+            <div class="section-title reveal active">
+                <h2>Website Development</h2>
+                <p>Explore my journey in building digital products.</p>
+                <div class="underline"></div>
+            </div>
+
+            <div class="categories-grid">
+                <!-- BoysClothes Card -->
+                <a href="https://boys-store-git-main-uzairs-projects-47a653b1.vercel.app" target="_blank"
+                    class="category-card reveal active">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>BoysClothes</h3>
+                    <p>A modern e-commerce platform for boys' apparel with a seamless shopping experience.</p>
+                    <span class="btn btn-secondary">Visit Site</span>
+                </a>
+
+                <!-- Currency Converter Advance Card -->
+                <a href="https://currency-converter-advance.vercel.app" target="_blank"
+                    class="category-card reveal active">
+                    <div class="category-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>currency converter advance</h3>
+                    <p>A professional fintech tool for real-time currency conversion with advanced features.</p>
+                    <span class="btn btn-primary">Visit Site</span>
+                </a>
+
+                <!-- Chat GPT Clone Card -->
+                <a href="https://chat-gpt-clone-sooty.vercel.app" target="_blank" class="category-card reveal active">
+                    <div class="category-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Chat GPT Clone</h3>
+                    <p>An AI-powered conversational interface designed for intuitive human-like interaction.</p>
+                    <span class="btn btn-secondary">Visit Site</span>
+                </a>
+
+                <!-- Weather App Card -->
+                <a href="https://weather-app-alpha-puce.vercel.app" target="_blank" class="category-card reveal active">
+                    <div class="category-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3>weather App</h3>
+                    <p>Get real-time weather updates and forecasts with a clean and minimal interface.</p>
+                    <span class="btn btn-primary">Visit Site</span>
+                </a>
+
+                <!-- Stone Paper Scissors Card -->
+                <a href="https://stone-paper-scissors-chi.vercel.app" target="_blank"
+                    class="category-card reveal active">
+                    <div class="category-icon">
+                        <i class="fas fa-hand-scissors"></i>
+                    </div>
+                    <h3>Stone Paper Scissors</h3>
+                    <p>A classic interactive game built with modern web technologies for fun and engagement.</p>
+                    <span class="btn btn-secondary">Play Game</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 100px;">
+        <div class="container">
+            <p>&copy; 2026 Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
