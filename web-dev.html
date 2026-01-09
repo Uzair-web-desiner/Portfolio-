@@ -40,9 +40,16 @@
 
         .categories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 3rem;
             margin-top: 4rem;
+        }
+
+        @media screen and (max-width: 480px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
 
         .category-card {
