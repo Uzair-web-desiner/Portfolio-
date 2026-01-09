@@ -29,7 +29,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, .logo {
+h1,
+h2,
+h3,
+.logo {
     font-family: 'Outfit', sans-serif;
 }
 
@@ -137,7 +140,8 @@ nav {
     color: var(--text-muted);
 }
 
-.nav-links li a:hover, .nav-links li a.active {
+.nav-links li a:hover,
+.nav-links li a.active {
     color: var(--primary-color);
 }
 
@@ -162,7 +166,7 @@ nav {
     position: relative;
     padding-top: 80px;
     background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.15), transparent),
-                radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.1), transparent);
+        radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.1), transparent);
 }
 
 .hero-content h2 {
@@ -219,9 +223,19 @@ nav {
 }
 
 @keyframes scroll {
-    0% { transform: translate(-50%, 0); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translate(-50%, 20px); opacity: 0; }
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, 20px);
+        opacity: 0;
+    }
 }
 
 /* About Section */
@@ -420,41 +434,56 @@ section {
     height: 100%;
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     border-radius: 10px;
-    width: 0; /* Animated with JS or inline style if manual */
+    width: 0;
+    /* Animated with JS or inline style if manual */
     transition: width 1.5s ease-out;
 }
 
 .skills-icons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
 }
 
 .icon-box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding: 1.5rem;
+    justify-content: center;
+    gap: 12px;
+    padding: 2rem 1.5rem;
     background: var(--bg-light);
-    border-radius: 15px;
+    border-radius: 20px;
     transition: var(--transition);
     border: 1px solid var(--glass-border);
+    width: 100%;
+    min-height: 140px;
+    cursor: pointer;
 }
 
 .icon-box:hover {
     background: var(--primary-color);
     color: white;
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+    border-color: var(--primary-color);
 }
 
 .icon-box i {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    transition: var(--transition);
+}
+
+.icon-box:hover i {
+    transform: scale(1.1);
 }
 
 .icon-box span {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
 }
 
 /* Contact Section */
@@ -487,7 +516,8 @@ section {
     gap: 1.5rem;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 1rem 1.5rem;
     background: var(--bg-light);
@@ -499,7 +529,8 @@ section {
     transition: var(--transition);
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     border-color: var(--primary-color);
     background: rgba(99, 102, 241, 0.05);
 }
@@ -563,15 +594,18 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 968px) {
-    .about-grid, .skills-content, .contact-grid {
+
+    .about-grid,
+    .skills-content,
+    .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .skills-icons {
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
     .nav-links {
         position: fixed;
         right: 0px;
@@ -587,11 +621,11 @@ footer {
         transition: transform 0.5s ease-in;
         z-index: 1001;
     }
-    
+
     .nav-links.nav-active {
         transform: translateX(0%);
     }
-    
+
     .burger {
         display: block;
         z-index: 1002;
@@ -602,11 +636,11 @@ footer {
     .skills-icons {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .hero-content h1 {
         font-size: 2.8rem;
     }
-    
+
     .cta-btns {
         flex-direction: column;
     }
